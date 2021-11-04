@@ -23,6 +23,8 @@ export class AppComponent {
   constructor(private store: Store) {
     const normalizedData:State = this.normalizeOriginalData(originalData);
 
+    console.log("normalizedData", normalizedData)
+
     this.addIntialDataToState(normalizedData);
     this.store.subscribe((state) => console.log(state));
   }
@@ -81,10 +83,10 @@ export class AppComponent {
     });
 
     const course = new schema.Entity('courses', {
-      course_part: [course_part],
+      course_parts: [course_part],
       guest_instructors_resources: [guest_instructors_resource],
       owner: user,
-      premium_point: [premium_point],
+      premium_points: [premium_point],
       cover_image: image
     });
 
