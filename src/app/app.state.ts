@@ -1,0 +1,1 @@
+export interface State { [key: string]: { [key: string]: any; }}
